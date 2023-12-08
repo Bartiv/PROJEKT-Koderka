@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>{{ title }}</title>
+    <title>{{ index }}</title>
 
     <!-- Google Fonts: --font-default: 'Nunito', sans-serif;   -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,19 +17,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <!-- Vlastní CSS -->
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-<div class="grid">
+<div class="wrapper">
 
 
 <header class="header">
     <div class="header__inner">
         <div class="header__left">
             <div class="header__logo-name">Running out of Thyme</div>
-            <img class="header__logo-pic" src="/images/logo_img.jpg" alt="logo ROOT" width="90px">
+            <img class="header__logo-pic" src="images/logo_img.jpg" alt="logo ROOT" width="90px">
         </div>
     </div>
         
@@ -59,7 +59,7 @@
 
 
     <div class="about__notice">
-        <h1>Vyběhni s námi každé úterý od šesti z parku Ladronka</h1>
+        <h2>Vyběhni s námi každé úterý od šesti z parku Ladronka</h2>
         <img class="about__mapa" src="images/Google Maps_Ladronka.jpg" alt="mapa" width="40%">
     </div>
 
@@ -81,11 +81,11 @@
         <div class="footer__grid-column">
          
             <p>
-                <span class="footer__title">Telefon:</span>+420 202 020 202
+                <span class="footer__title">Telefon:</span><br>+420 202 020 202
             </p>    
 
             <p>
-                <span class="footer__title">Email:</span>
+                <span class="footer__title">Email:</span><br>
                 <a href="mailto:root@root.com">root@root.com</a>
             </p>
 
@@ -97,7 +97,7 @@
 
             <p>
                 <img class="footer__icon" src="images/fb.svg" alt="icon-fb" width="45px">
-                
+                <a href="https://www.facebook.com/" title="fb"></a>
             </p>
             
             <p>
@@ -111,6 +111,6 @@
 </footer>
 
 </div> 
-<!-- konec gridu -->
+<!-- konec .wrapper -->
 </body>
 </html>
