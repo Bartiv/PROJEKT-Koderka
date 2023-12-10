@@ -27,7 +27,7 @@ body{
 .wrapper{
     max-width: 1600px;
     margin: 0 auto;
-    background-color: var(--secondary);
+    background-color: white;
 }
 
 h1, h2, h3 {
@@ -63,6 +63,7 @@ section {
     align-items: center;
     background-color: var(--dark);
     color: var(--secondary);
+    
 }
 
 .header__logo-name{
@@ -82,7 +83,6 @@ section {
 }
 
 /* MENU */
-
 
 .menu__item{
     margin: 0;
@@ -107,7 +107,73 @@ section {
     color: var(--secondary);
 }
 
+/* MAIN - ABOUT */
 
+.about{
+    padding: 0;
+}
+
+.about__image {
+    width: 100%;
+    min-height: 400px;
+    /* border: 1px solid opacity; */
+    /* object-fit: cover; */
+    background: url(./../images/woman-seaside.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-position: center;
+    
+
+    /* pro mobil nastav object-fit: cover; */
+}
+
+.about__content{
+    padding: var(--spacer-double) var(--spacer-bigger);
+    
+    
+}
+
+.about__content h2{
+    text-align: center;
+    color: var(--dark);
+    font-weight: bold;
+}
+.about__content p{
+    border: 1px solid opacity;
+    width: 700px;
+    margin: auto;
+    text-align: justify;
+    color: var(--dark);
+   
+}
+
+.about__grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: var(--spacer-bigger);
+    background-color: var(--secondary);
+    color: var(--dark);
+    font-weight: bolder;
+
+}
+
+.about__grid p{
+    padding-bottom: 0;
+
+}
+
+
+.grid__column p{
+    grid-column: span 2;
+    
+}
+
+
+.grid__column img{
+    max-width: 300px;
+    box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+}
 /* FOOTER */
 
 .footer{
@@ -140,15 +206,220 @@ opacity: 0.6;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     color: var(--secondary);
-    font-size: 20px;
     text-align: center;
-    padding: (--spacer-double) var(--spacer-bigger); 
+    padding: var(--spacer-quarter) var(--spacer-bigger);
 }
 
 .footer__copyright{
-    padding: var(--spacer) var(--spacer-bigger);
     text-align: center;
     background-color: var(--secondary);
     color: var(--primary);
+    padding: var(--spacer) var(--spacer-bigger);
+}
+
+/* *******KONEC HLAVNÍ STRÁNKY ******** */
+
+/* NÁŠ TÝM */
+
+body{
+    background-color: var(--secondary);
+    color: var(--dark);
+}
+.team{
+    margin-left: 80px;
+    width: 100%;
+    max-width: 850px; 
+}
+
+
+.team__image{
+    border-radius: 30px 2px;
+    float: left;
+    margin: 0 20px 30px 0;
+    box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+}
+
+.team__member{
+margin: 20px auto 0 auto;
+display: flex;
+}
+
+.team__main{
+    padding-left: 20px;
+    width: 75%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.team__main h3{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.page__title{
+    margin: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.page__title h2{
+    font-weight: bold;
+}
+
+/* SPOLEČNÉ AKCE */
+
+.page__title{
+    margin: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.page__title h2{
+    font-weight: bold;
+}
+/* .theme{
+    margin-left: 80px;
+    max-width: 950px;
+} */
+
+.theme__article{
+    margin: 20px auto 50px 100px;
+    display: flex;
+    }
+
+.theme__main{
+    padding-left: 40px;
+    padding-bottom: 50px;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 500px
+}
+    
+.theme__main h3{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.theme__image{
+    border: 10px solid var(--secondary);
+    box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+    
     
 }
+
+.theme__image--right{
+    float: right;
+    margin: 0 30px 15px 0;
+    border: 10px solid var(--secondary);
+    box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+}
+
+.theme__main--right{
+    padding-right: 20px;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 500px
+}
+
+/* PŘIDEJ SE - FORMULÁŘ */
+
+.form__main{
+    color: var(--dark);
+    margin: 100px;
+    width: 100%;  
+    text-align: left;
+    display: flex;
+    vertical-align: top;
+    gap: var(--spacer-double);
+}
+
+
+
+.form__main-top{
+    max-width: 450px;
+}
+
+.form-field{
+    margin-bottom: 10px;
+    max-width: 400px;
+}
+
+
+.form-field label{
+    display: block;
+    font-size: 15px;
+    color: #00735C
+
+}
+
+.form-field input,
+.form-field textarea{
+    width: 100%;
+    border: 2px solid #00735C;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: #EDF0EE;
+
+}
+.form-field input:hover,
+.form-field textarea:hover{
+    outline: 2px solid #00493A;
+    background-color: white;
+}
+
+
+.form-checkbox{
+     margin-bottom: 10px;
+}
+
+.form-checkbox input{
+   width: 15px;
+   height: 15px;
+}
+
+.form-checkbox input:focus{
+    outline: 2px solid #00493A;
+    background-color: white;  
+}
+
+
+
+
+.button{
+    background-color: #00735C;
+    color: #EDF0EE;
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+   
+}
+
+.button:active{
+    transform: scale(0.95);
+}
+.button:hover{
+    background-color: #00493A;
+   
+}
+
+.clanek{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 25px;
+    margin: 25px;
+
+}
+
+.clanek img {
+    width: 100%;
+}
+
+
+
+
+
