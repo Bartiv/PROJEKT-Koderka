@@ -24,9 +24,9 @@ body{
     
     
 }
-/******* TABLET *******/
+/******* MOBIL *******/
 .wrapper{
-    max-width: 820px;
+    /* max-width: 540px; */
     margin: 0 auto;
     background-color: white;
     border: 0.3px solid lightslategray;
@@ -120,6 +120,8 @@ section {
 
 .about{
     padding: 0;
+    width: 100%;
+   
 }
 
 .about__image {
@@ -161,7 +163,9 @@ section {
 .about__content p{
     border: 1px solid opacity;
     /* width: 700px; T*/
-    width: 300px;
+    width: 100%;
+    max-width: 500px;
+
     margin: auto;
     /* text-align: justify; T */
     text-align: center;
@@ -177,11 +181,15 @@ section {
     background-color: var(--secondary);
     color: var(--dark);
     font-weight: bolder;
+    width: 100%;
+    margin: 60px auto;
+    
 
 }
 
 .about__grid p{
     padding-bottom: 0;
+    
 
 }
 
@@ -248,7 +256,7 @@ body{
     color: var(--dark);
 }
 .team{
-    /* margin-left: 80px; T*/
+    /* margin-left: 40px; T*/
     margin-left: 20px;
     width: 100%;
     /* max-width: 660px;  T*/
@@ -303,33 +311,46 @@ align-items: center;
 
 /* SPOLEČNÉ AKCE */
 
-.page__title{
-    margin: 50px;
+/* .page__title{
+    margin: 50px; 
+    margin: 30px;
     font-size: 20px;
     text-align: center;
-}
+} */ 
 
-.page__title h2{
+
+/* .page__title h2{
     font-weight: bold;
-}
+} */ˇ
+
+/* už je jednou uvedené page__title / page__title h2 */
 /* .theme{
     margin-left: 80px;
     max-width: 950px;
 } */
 
+.theme{
+    /* margin-left: 40px; T*/
+    margin-left: 20px;
+    width: 100%;
+    /* max-width: 660px;  T*/
+    /* max-width: 400px; */
+}
 .theme__article{
-    margin: 20px auto 50px 20px;
-    display: flex;
-    align-items: flex-start;
+    /* margin: 20px auto 50px 20px; T*/
+    /* display: flex; T*/
+    align-items: center;
     }
 
 .theme__main{
-    padding-left: 40px;
-    padding-bottom: 50px;
-    text-align: left;
+    /* padding-left: 40px; T */
+    /* padding-bottom: 50px; T */
+    padding: 40px;
+    /* text-align: left; T*/
     display: inline-block;
     vertical-align: top;
-    max-width: 500px
+    /* max-width: 500px; T*/
+    min-width: 350px;
 }
     
 
@@ -337,26 +358,33 @@ align-items: center;
 .theme__image{
     border: 10px solid var(--secondary);
     box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
-    float: left;
-    margin: 0 30px 15px 0;
+    /* float: left; T*/
+    /* margin: 0 30px 15px 0; T*/
+    width: 100%;
+    /* max-width: 450px; */
+    display: block;
     
     
 }
 
 .theme__image--right{
-    float: right;
-    margin: 0 30px 15px 0;
+    /* float: right; */
+    /* margin: 0 30px 15px 0; */
     border: 10px solid var(--secondary);
     box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+    width: 100%;
+    display: block;
     
 }
 
 .theme__main--right{
-    padding-right: 20px;
-    text-align: left;
+    /* padding-right: 20px; T*/
+    /* text-align: left; T*/
+    padding: 40px;
+    padding-top: 0;
     display: inline-block;
     vertical-align: top;
-    max-width: 500px
+    min-width: 350px;
 }
 
 /* PŘIDEJ SE - FORMULÁŘ */
@@ -364,15 +392,23 @@ align-items: center;
 .form__main{
     color: var(--dark);
     border: 1px solid var(--secondary);
-    margin: 50px auto 50px 150px;
-    width: 80%;  
+    /* margin: 50px auto 50px 150px;T */
+    margin: 20px;
+    /* width: 80%;   T*/
+    width: 100%;
     text-align: left;
 }
 
 
-
 .form__main-top{
-    max-width: 450px;
+    min-width: 250px;
+}
+
+.form__picture{
+    width: 100%;
+   
+   
+   
 }
 
 .form-field{
@@ -469,6 +505,12 @@ align-items: center;
 
 @media screen and (min-width: 540px){
 
+    .wrapper{
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        border: 0.3px solid lightslategray;
+    }
 .menu__link{
     display: inline-block; 
     margin: 0 11px;
@@ -480,6 +522,8 @@ align-items: center;
     text-decoration: none;
     color: var(--secondary);
 }
+
+
 .about__content p{
     border: 1px solid opacity;
     width: 700px;
@@ -508,16 +552,6 @@ align-items: center;
    
 }
 
-.about__grid{
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 50px;
-    padding: var(--spacer-bigger);
-    background-color: var(--secondary);
-    color: var(--dark);
-    font-weight: bolder;
-
-}
 
 .grid__column p{
     grid-column: span 2;
@@ -536,7 +570,7 @@ align-items: center;
     text-align: center;
 }
 .team{
-    margin-left: 80px;
+    margin-left: 40px;
     width: 100%;
     max-width: 660px; 
 }
@@ -558,5 +592,73 @@ align-items: center;
         display: inline-block;
         vertical-align: top;
     }
-    
+    .page__title{
+        margin: 50px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .theme{
+        margin-left: 40px; 
+        width: 100%;
+        /* max-width: 660px;   */
+        
+    }
+    .theme__article{
+        margin: 20px auto 50px 20px;
+        display: flex;
+        align-items: flex-start;
+        }
+
+        .theme__main{
+            padding-left: 40px;
+            padding-bottom: 50px;
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 500px
+        }
+
+        .theme__main--right{
+            padding-right: 20px;
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+            max-width: 500px
+        }
+
+
+        .theme__image{
+            border: 10px solid var(--secondary);
+            box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+            /* float: left; */
+            margin: 0 30px 15px 0;
+            width: 100%;
+            max-width: 500px; 
+        }
+
+        .theme__image--right{
+            /* float: right; */
+            margin: 0 30px 15px 0;
+            border: 10px solid var(--secondary);
+            box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+            width: 100%;
+            max-width: 500px;
+        }
+        .form__main{
+            color: var(--dark);
+            border: 1px solid var(--secondary);
+            margin: 50px auto 50px 50px;
+            width: 80%;  
+            text-align: left;
+        }
+        .form__main-top{
+            max-width: 450px;
+        }
+        
+        .form__picture{
+           width: 100%;
+           max-width: 450px;
+        }
 }
+
+
