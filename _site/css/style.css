@@ -67,6 +67,7 @@ section {
     align-items: center;
     background-color: var(--dark);
     color: var(--secondary);
+    padding: 10px;
     
 }
 
@@ -74,7 +75,7 @@ section {
     font-family: var(--font-special);
     font-size: 16px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     flex: 0 0 100%;
     margin: 10px 20px;
     color: var(--secondary);
@@ -182,27 +183,34 @@ section {
     color: var(--dark);
     font-weight: bolder;
     width: 100%;
-    margin: 60px auto;
-    
-
+    margin: 60px auto;   
 }
 
 .about__grid p{
     padding-bottom: 0;
-    
-
 }
 
 
 /* .grid__column p{
     grid-column: span 2;
     
-} T*/
+} T */
 
 
+.grid__column{
+    padding-bottom: 40px;
+}
+
+.grid__column:last-child{
+    padding-bottom: 0;
+}
 .grid__column img{
-    max-width: 300px;
+    /* max-width: 300px; */
     box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+    width: 100%;
+   
+
+    
 }
 /* FOOTER */
 
@@ -332,7 +340,7 @@ align-items: center;
 .theme{
     /* margin-left: 40px; T*/
     margin-left: 20px;
-    width: 100%;
+    /* width: 100%; */
     /* max-width: 660px;  T*/
     /* max-width: 400px; */
 }
@@ -347,10 +355,11 @@ align-items: center;
     /* padding-bottom: 50px; T */
     padding: 40px;
     /* text-align: left; T*/
-    display: inline-block;
+    text-align: justify;
     vertical-align: top;
     /* max-width: 500px; T*/
-    min-width: 350px;
+    /* width: 100%;
+    min-width: 350px; */
 }
     
 
@@ -374,40 +383,37 @@ align-items: center;
     box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
     width: 100%;
     display: block;
+    margin-bottom: 20px;
     
 }
 
 .theme__main--right{
     /* padding-right: 20px; T*/
     /* text-align: left; T*/
-    padding: 40px;
+    padding: 40px 40px 20px 40px;
     padding-top: 0;
-    display: inline-block;
+    text-align: justify;
     vertical-align: top;
-    min-width: 350px;
+    /* min-width: 350px; */
 }
 
 /* PŘIDEJ SE - FORMULÁŘ */
 
 .form__main{
     color: var(--dark);
-    border: 1px solid var(--secondary);
     /* margin: 50px auto 50px 150px;T */
     margin: 20px;
     /* width: 80%;   T*/
-    width: 100%;
     text-align: left;
 }
 
 
 .form__main-top{
-    min-width: 250px;
+    text-align: justify;
 }
 
 .form__picture{
-    width: 100%;
-   
-   
+    width: 100%;  
    
 }
 
@@ -488,10 +494,12 @@ align-items: center;
 
 .blog h2{
     text-align: center;
+    font-weight: bold;
 }
+
 .clanek{
-    display: grid;
-    grid-template-columns: 250px 1fr;
+    /* display: grid;
+    grid-template-columns: 250px 1fr; T*/
     gap: 25px;
     margin: 25px;
 
@@ -499,7 +507,51 @@ align-items: center;
 
 .clanek img {
     width: 100%;
+    border: 1 solid var(--primary);
+    box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
 }
+
+.clanek__texty h3{
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+/* CLANEK */
+
+.article{
+    padding: 50px;
+}
+
+.article__title  {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .article__meta {
+    color: silver;
+  }
+  
+  .article__content {
+    /* display: grid;
+    grid-template-columns: 3fr 2fr; T*/
+    gap: 50px;
+  }
+  
+  .article__perex {
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: justify;
+  }
+  
+  .article__image {
+    display: block;
+    width: 100%;
+    border: 1 solid var(--primary);
+    box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+  }
+
+
 
 /* TABLET - MEDIA QUERY */
 
@@ -514,7 +566,7 @@ align-items: center;
 .menu__link{
     display: inline-block; 
     margin: 0 11px;
-    padding: 8px;
+    padding: 0;
     position: relative;
     text-transform: uppercase;
     font-weight: bolder;
@@ -522,7 +574,9 @@ align-items: center;
     text-decoration: none;
     color: var(--secondary);
 }
-
+.menu__link:last-child{
+    padding-right: 20px;
+}
 
 .about__content p{
     border: 1px solid opacity;
@@ -555,8 +609,10 @@ align-items: center;
 
 .grid__column p{
     grid-column: span 2;
-    
+      
 }
+
+
 .footer__grid-column{
     display: grid; 
     grid-template-columns: repeat(5, 1fr);
@@ -599,41 +655,45 @@ align-items: center;
     }
     .theme{
         margin-left: 40px; 
-        width: 100%;
+        /* width: 100%; */
         /* max-width: 660px;   */
         
     }
     .theme__article{
         margin: 20px auto 50px 20px;
-        display: flex;
-        align-items: flex-start;
+        /* display: flex;
+        align-items: flex-start; */
+        display: grid;
+        grid-template-columns: 3fr 2fr; 
         }
 
         .theme__main{
-            padding-left: 40px;
+            padding-left: 20px;
             padding-bottom: 50px;
-            text-align: left;
-            display: inline-block;
+            text-align: justify;
             vertical-align: top;
-            max-width: 500px
+            /* max-width: 500px */
+            /* width: 100%; */
         }
 
         .theme__main--right{
             padding-right: 20px;
-            text-align: left;
-            display: inline-block;
+            text-align: justify;
+            /* display: inline-block; */
             vertical-align: top;
-            max-width: 500px
+            /* max-width: 500px */
+            /* width: 100%; */
         }
 
 
         .theme__image{
+            margin: 0 30px 15px 0;
             border: 10px solid var(--secondary);
             box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
+            
             /* float: left; */
-            margin: 0 30px 15px 0;
-            width: 100%;
-            max-width: 500px; 
+            
+            /* max-width: 500px;  */
         }
 
         .theme__image--right{
@@ -641,14 +701,13 @@ align-items: center;
             margin: 0 30px 15px 0;
             border: 10px solid var(--secondary);
             box-shadow: 2px 4px 6px rgba(1, 47, 35, 0.5);
-            width: 100%;
-            max-width: 500px;
+            /* max-width: 500px; */
         }
         .form__main{
             color: var(--dark);
-            border: 1px solid var(--secondary);
+            /* border: 1px solid var(--secondary); */
             margin: 50px auto 50px 50px;
-            width: 80%;  
+            /* width: 80%;   */
             text-align: left;
         }
         .form__main-top{
@@ -659,6 +718,23 @@ align-items: center;
            width: 100%;
            max-width: 450px;
         }
+
+        .clanek{
+            display: grid;
+            grid-template-columns: 250px 1fr; 
+            gap: 25px;
+            margin: 25px;
+        
+        }
+        .clanek__texty h3{
+            padding-top: 0;
+        }
+
+        .article__content {
+            display: grid;
+            grid-template-columns: 3fr 2fr; 
+            gap: 50px;
+          }
 }
 
 
