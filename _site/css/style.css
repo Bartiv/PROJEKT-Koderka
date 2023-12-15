@@ -183,7 +183,7 @@ section {
     color: var(--dark);
     font-weight: bolder;
     width: 100%;
-    margin: 60px auto;   
+    margin: 10px auto;   
 }
 
 .about__grid p{
@@ -307,7 +307,7 @@ align-items: center;
 
 .page__title{
     /* margin: 50px; T*/
-    margin: 30px;
+    margin: 25px 50px 25px 50px;
     /* font-size: 20px; T */
     font-size: 16px;
     text-align: center;
@@ -621,7 +621,7 @@ align-items: center;
     padding: var(--spacer-quarter) var(--spacer-bigger);
 }
 .page__title{
-    margin: 50px;
+    margin: 25px 50px 25px 50px;
     font-size: 20px;
     text-align: center;
 }
@@ -648,11 +648,7 @@ align-items: center;
         display: inline-block;
         vertical-align: top;
     }
-    .page__title{
-        margin: 50px;
-        font-size: 20px;
-        text-align: center;
-    }
+    
     .theme{
         margin-left: 40px; 
         /* width: 100%; */
@@ -706,17 +702,22 @@ align-items: center;
         .form__main{
             color: var(--dark);
             /* border: 1px solid var(--secondary); */
-            margin: 50px auto 50px 50px;
+            margin: 0 auto 50px 50px;
             /* width: 80%;   */
             text-align: left;
         }
         .form__main-top{
-            max-width: 450px;
+            text-align: justify;
+        }
+
+        .form__text{
+            margin-bottom: 40px;
         }
         
         .form__picture{
            width: 100%;
            max-width: 450px;
+           margin-bottom: 30px;
         }
 
         .clanek{
